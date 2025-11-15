@@ -1,0 +1,8 @@
+kubeconfig_path   = "~/.kube/config"
+kube_context      = ""
+openai_api_key    = "your-openai-api-key-here"
+container_registry = "docker.io/your-username"
+image_tag         = "latest"
+backend_replicas  = 3
+frontend_replicas = 2
+
