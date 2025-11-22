@@ -2,7 +2,7 @@
 
 A production-ready AI-powered compliance analysis system built with LangChain, LangGraph, and a multi-agent architecture. Designed for financial institutions like BNY Mellon, JPMorgan, Goldman Sachs, Visa, and Stripe.
 
-## 🏗️ Architecture
+##  Architecture
 
 ### Multi-Agent System
 - **Retriever Agent (RAG)**: Retrieves relevant regulatory documents from vector database
@@ -17,7 +17,7 @@ A production-ready AI-powered compliance analysis system built with LangChain, L
 - **Infrastructure**: Kubernetes, Terraform, Docker
 - **Deployment**: Vercel (Frontend), Kubernetes (Backend)
 
-## 📋 Prerequisites
+##  Prerequisites
 
 - Python 3.11+
 - Node.js 18+
@@ -26,7 +26,7 @@ A production-ready AI-powered compliance analysis system built with LangChain, L
 - Terraform 1.0+
 - OpenAI API key
 
-## 🚀 Quick Start
+##  Quick Start
 
 ### 1. Clone and Setup
 
@@ -67,7 +67,7 @@ Access:
 - Backend API: http://localhost:8000
 - API Docs: http://localhost:8000/docs
 
-## 📦 Deployment
+##  Deployment
 
 ### Option 1: Deploy Frontend to Vercel
 
@@ -172,7 +172,7 @@ ENVIRONMENT=production
 NEXT_PUBLIC_API_URL=http://your-backend-url:8000
 ```
 
-## 📚 Usage
+##  Usage
 
 ### 1. Upload Documents
 
@@ -201,7 +201,7 @@ curl -X POST http://localhost:8000/api/compliance/analyze \
   }'
 ```
 
-## 🏛️ Project Structure
+##  Project Structure
 
 ```
 agent/
@@ -235,7 +235,7 @@ agent/
 └── README.md
 ```
 
-## 🧪 Testing
+##  Testing
 
 ### Backend API Health Check
 
@@ -249,7 +249,7 @@ curl http://localhost:8000/health
 curl "http://localhost:8000/api/documents/search?query=AML%20regulations&k=5"
 ```
 
-## 🔒 Security Considerations
+##  Security Considerations
 
 - Store API keys in Kubernetes secrets (not in code)
 - Use environment variables for sensitive data
@@ -257,7 +257,7 @@ curl "http://localhost:8000/api/documents/search?query=AML%20regulations&k=5"
 - Use HTTPS in production
 - Implement authentication/authorization for production use
 
-## 📊 Monitoring
+##  Monitoring
 
 ### Kubernetes Monitoring
 
@@ -269,7 +269,7 @@ kubectl logs -f deployment/compliance-copilot-backend -n compliance-copilot
 kubectl top pods -n compliance-copilot
 ```
 
-## 🚧 Production Checklist
+##  Production Checklist
 
 - [ ] Set up proper authentication/authorization
 - [ ] Configure HTTPS/TLS certificates
@@ -282,18 +282,18 @@ kubectl top pods -n compliance-copilot
 - [ ] Load testing
 - [ ] Disaster recovery plan
 
-## 🤝 Contributing
+##  Contributing
 
 1. Fork the repository
 2. Create a feature branch
 3. Make your changes
 4. Submit a pull request
 
-## 📝 License
+##  License
 
 MIT License
 
-## 🎯 Resume Points
+##  Resume Points
 
 - Built production-ready multi-agent AI system using LangChain and LangGraph
 - Implemented RAG pipeline with ChromaDB for regulatory document retrieval
