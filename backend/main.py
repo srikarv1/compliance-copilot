@@ -10,6 +10,7 @@ from agents.retriever_agent import RetrieverAgent
 from agents.policy_extraction_agent import PolicyExtractionAgent
 from agents.risk_classification_agent import RiskClassificationAgent
 from agents.hallucination_guard_agent import HallucinationGuardAgent
+from agents.report_generation_agent import ReportGenerationAgent
 from agents.supervisor_agent import SupervisorAgent
 
 # Ensure OPENAI_API_KEY is set in environment for langchain-openai
@@ -30,14 +31,16 @@ app.add_middleware(
 # Initialize components
 vector_store = VectorStoreManager()
 retriever_agent = RetrieverAgent(vector_store)
-policy_extractor = PolicyExtractionAgent()
-risk_classifier = RiskClassificationAgent()
-hallucination_guard = HallucinationGuardAgent()
+policy_extractor = PolicyExtractionAgent(vector_store)
+risk_classifier = RiskClassificationAgent(vector_store)
+hallucination_guard = HallucinationGuardAgent(vector_store)
+report_generator = ReportGenerationAgent(vector_store)
 supervisor = SupervisorAgent(
     retriever_agent,
     policy_extractor,
     risk_classifier,
-    hallucination_guard
+    hallucination_guard,
+    report_generator
 )
 
 class ComplianceQuery(BaseModel):
